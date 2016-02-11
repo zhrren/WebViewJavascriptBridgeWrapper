@@ -1,5 +1,5 @@
 /*!
- * WebViewJavascriptBridge.js v0.0.1
+ * WebViewJavascriptBridgeWrapper.js v0.0.1
  * (c) 2015 Mark
  * Released under the MIT License.
  */
@@ -223,6 +223,7 @@ var WebViewJavascriptBridge = (function () {
                     WebViewJavascriptBridge.callHandler = IOSWebViewJavascriptBridge.callHandler;
                     WebViewJavascriptBridge._fetchQueue = IOSWebViewJavascriptBridge._fetchQueue;
                     WebViewJavascriptBridge._handleMessageFromObjC = IOSWebViewJavascriptBridge._handleMessageFromObjC;
+
                     IOSWebViewJavascriptBridge.init(messageHandler);
                     break;
                 case 'android':
@@ -230,6 +231,7 @@ var WebViewJavascriptBridge = (function () {
                     WebViewJavascriptBridge.registerHandler = AndroidWebViewJavascriptBridge.registerHandler;
                     WebViewJavascriptBridge.callHandler = AndroidWebViewJavascriptBridge.callHandler;
                     WebViewJavascriptBridge._handleMessageFromJava = AndroidWebViewJavascriptBridge._handleMessageFromJava;
+
                     AndroidWebViewJavascriptBridge.init(messageHandler);
                     break;
                 default :
